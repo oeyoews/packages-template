@@ -17,6 +17,7 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "types": "./dist/index.d.ts",
   "tsup": {
     "entry": [
       "index.ts"
@@ -34,7 +35,8 @@
     "clean": true
   },
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
   "files": [
