@@ -1,0 +1,50 @@
+{
+  "name": "packages-template",
+  "private": true,
+  "version": "1.3.0",
+  "description": "",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "tsup": {
+    "entry": [
+      "index.ts"
+    ],
+    "splitting": false,
+    "sourcemap": false,
+    "treeshake": true,
+    "minify": true,
+    "dts": true,
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "shims": true,
+    "clean": true
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "author": "oeyoews",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}
